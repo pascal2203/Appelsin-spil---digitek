@@ -2,6 +2,8 @@
  * Dette script definerer klassen Kurv
 */
 
+// Her er en ændring committed med git
+
 class Kurv {
     /* Den første del er en "konstruktør".
      * Den tager parametrene og konstruerer et nyt objekt 
