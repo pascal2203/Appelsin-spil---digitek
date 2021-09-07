@@ -40,23 +40,44 @@ function setup() {  // kører kun en gang, når programmet startes
 
 function draw() {
     background(0);
-    
-    if (spilIgang) {
-        move();
-        checkScore();
-        display();
-        if (keyIsDown(UP_ARROW)) {
-            turban.moveY(-5);
+
+    if (liv == 8|| liv == 6 || liv == 4|| liv == 2){
+        if (spilIgang) {
+            move();
+            checkScore();
+            display();
+            if (keyIsDown(UP_ARROW)) {
+                turban.moveY(-5);
+            }
+            if (keyIsDown(DOWN_ARROW)) {
+                turban.moveY(5);
+            }    
+            if (keyIsDown(LEFT_ARROW)) {
+                turban.moveX(-5);
+            }
+            if (keyIsDown(RIGHT_ARROW)) {
+                turban.moveX(5);
+            } 
         }
-        if (keyIsDown(DOWN_ARROW)) {
-            turban.moveY(5);
-        }    
-        if (keyIsDown(LEFT_ARROW)) {
-            turban.moveX(-5);
+    }
+    else if (liv == 7 || liv == 5 || liv == 3|| liv == 1){
+        if (spilIgang) {
+            move();
+            checkScore();
+            display();
+            if (keyIsDown(UP_ARROW)) {
+                turban.moveY(5);
+            }
+            if (keyIsDown(DOWN_ARROW)) {
+                turban.moveY(-5);
+            }    
+            if (keyIsDown(LEFT_ARROW)) {
+                turban.moveX(5);
+            }
+            if (keyIsDown(RIGHT_ARROW)) {
+                turban.moveX(-5);
+            } 
         }
-        if (keyIsDown(RIGHT_ARROW)) {
-            turban.moveX(5);
-        } 
     }
     else {  // så er Game Over det der skal vises
         fill(col);
